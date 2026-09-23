@@ -57,7 +57,7 @@ from frontend import router as frontend_router
 
 
 
-app = FastAPI(title="ResQ API", version="1.1.0")
+app = FastAPI(title="CrisisGrid API", version="1.1.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -92,7 +92,7 @@ init_db()
 def home():
 
     return {
-        "message": "ResQ backend is running",
+        "message": "CrisisGrid backend is running",
         "version": "1.1.0",
         "dashboard": "/dashboard",
     }
