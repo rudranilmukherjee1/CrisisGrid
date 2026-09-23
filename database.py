@@ -69,23 +69,6 @@ def init_db():
         "PRAGMA journal_mode=WAL"
     )
 
-    # Add this inside your init_db() function alongside your other CREATE TABLE statements:
-    cursor.execute(
-        """
-            CREATE TABLE IF NOT EXISTS road_hazards (
-            hazard_id TEXT PRIMARY KEY,
-            hazard_type TEXT NOT NULL,
-            description TEXT NOT NULL,
-            location TEXT NOT NULL,
-            latitude REAL NOT NULL,
-            longitude REAL NOT NULL,
-            radius_meters REAL NOT NULL DEFAULT 100,
-            status TEXT NOT NULL DEFAULT 'active',
-            created_at TEXT NOT NULL,
-            updated_at TEXT NOT NULL
-        )
-    """
-    )
 
     # =================================================
     # INCIDENT TABLE
